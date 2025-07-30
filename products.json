@@ -1,0 +1,74 @@
+[
+  {
+    "id": "P001",
+    "name": "枇杷秋梨膏",
+    "category": "膏/酱类",
+    "spec": "260g",
+    "unit": "瓶",
+    "price": 48.00,
+    "remarks": "产地: 金平"
+  },
+  {
+    "id": "P002",
+    "name": "薄皮核桃",
+    "category": "干果类",
+    "spec": "360g",
+    "unit": "袋",
+    "price": 21.00,
+    "remarks": "产地: 新疆"
+  },
+  {
+    "id": "P003",
+    "name": "雪山糯枣",
+    "category": "干果类",
+    "spec": "245g",
+    "unit": "袋",
+    "price": 30.00,
+    "remarks": "产地: 怒江"
+  },
+  {
+    "id": "P004",
+    "name": "山茶油",
+    "category": "粮油类",
+    "spec": "500ml*2",
+    "unit": "件",
+    "price": 160.00,
+    "remarks": "产地: 福建"
+  },
+  {
+    "id": "P005",
+    "name": "花王洗衣液",
+    "category": "日用品",
+    "spec": "690ml",
+    "unit": "瓶",
+    "price": 38.00,
+    "remarks": "产地: 日本"
+  },
+  {
+    "id": "P006",
+    "name": "大开洋",
+    "category": "海产类",
+    "spec": "250g",
+    "unit": "袋",
+    "price": 61.00,
+    "remarks": "产地: 浙江"
+  },
+  {
+    "id": "P007",
+    "name": "绿豆",
+    "category": "杂粮类",
+    "spec": "500g",
+    "unit": "袋",
+    "price": 12.00,
+    "remarks": "产地: 东北"
+  },
+  {
+    "id": "P008",
+    "name": "花王洗手液",
+    "category": "日用品",
+    "spec": "240ml",
+    "unit": "瓶",
+    "price": 28.00,
+    "remarks": "产地: 日本"
+  }
+]

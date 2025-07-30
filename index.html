@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuikQuote - 专业报价单工具</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 左侧产品选择区 -->
+        <div class="product-selector">
+            <header>
+                <h1>产品选择</h1>
+            </header>
+            <main id="product-list-container">
+                <div class="product-select-group">
+                    <div class="input-group">
+                        <label for="category-select">产品分类：</label>
+                        <select id="category-select"></select>
+                    </div>
+                    <div class="input-group">
+                        <label for="product-select">产品名称：</label>
+                        <select id="product-select"></select>
+                    </div>
+                    <button id="add-product-btn" class="btn btn-primary" style="margin-top:16px;">添加到报价单</button>
+                </div>
+            </main>
+        </div>
+
+        <!-- 右侧报价单预览区 -->
+        <div class="quote-preview">
+            <header>
+                <h2>报价单</h2>
+                <div class="customer-info" id="customer-info-area">
+                    <div class="customer-info-row">
+                        <div class="info-label">客户名称：</div>
+                        <div class="info-value">
+                            <input type="text" id="customer-name" placeholder="请输入客户名称">
+                            <span class="print-only" id="customer-name-print"></span>
+                        </div>
+                        <div class="info-label">报价单位：</div>
+                        <div class="info-value">
+                            <select id="quote-unit">
+                                <option value="上海起宏国际贸易有限公司">上海起宏国际贸易有限公司</option>
+                                <option value="上海齐戈贸易有限公司">上海齐戈贸易有限公司</option>
+                            </select>
+                            <span class="print-only" id="quote-unit-print"></span>
+                        </div>
+                    </div>
+                    <div class="customer-info-row">
+                        <div class="info-label">报价日期：</div>
+                        <div class="info-value">
+                            <input type="date" id="quote-date">
+                            <span class="print-only" id="quote-date-print"></span>
+                        </div>
+                        <div class="info-label">报价单编号：</div>
+                        <div class="info-value">
+                            <span id="quote-id" style="font-weight:bold;color:#2c3e50;"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <table class="quote-table">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>商品名称</th>
+                            <th>规格</th>
+                            <th>单位</th>
+                            <th>单价 (元)</th>
+                            <th>数量</th>
+                            <th>小计 (元)</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody id="quote-table-body">
+                        <!-- 报价单内容将通过JavaScript动态生成 -->
+                    </tbody>
+                </table>
+            </main>
+            <footer>
+                <div class="total-section">
+                    <div class="total-row">
+                        <span class="total-label">总计金额（大写）：</span>
+                        <span id="total-price-chinese" class="total-value">零元整</span>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">总计金额（小写）：</span>
+                        <span id="total-price" class="total-value">¥0.00</span>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="export-excel-btn" class="btn btn-primary">导出 Excel</button>
+                    <button id="print-btn" class="btn btn-secondary">打印报价单</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html> 
